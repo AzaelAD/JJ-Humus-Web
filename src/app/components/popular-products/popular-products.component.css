@@ -1,0 +1,15 @@
+.products-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+.popular-products h2{
+  text-align: center;
+}
+
+  mat-card {
+    max-width: 300px;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
+  }

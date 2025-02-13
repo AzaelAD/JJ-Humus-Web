@@ -1,0 +1,15 @@
+<section class="popular-products">
+  <h2>Productos populares</h2>
+  <div class="products-grid">
+    <mat-card *ngFor="let product of products">
+      <img mat-card-image [src]="product.image" alt="Product Image">
+      <mat-card-content>
+        <h3>{{ product.name }}</h3>
+        <p>{{ product.description }}</p>
+      </mat-card-content>
+      <mat-card-actions>
+        <button mat-button color="primary">Más información</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</section>
