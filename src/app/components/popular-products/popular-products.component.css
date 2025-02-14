@@ -1,15 +1,28 @@
 .products-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
 
-.popular-products h2{
+.popular-products h2 {
   text-align: center;
 }
 
-  mat-card {
-    max-width: 300px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-  }
+mat-card {
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 450px; 
+}
+
+mat-card-content {
+  flex-grow: 1;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end; 
+  margin-top: auto;
+}

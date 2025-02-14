@@ -3,12 +3,25 @@
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    top: 0;
+    left: 0;
     padding: 10px;
     z-index: 1000;
-    background-color: #FFFF;
+    background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .spacer {
     flex: 1;
 }
+
+/* Estilo para el botón activo */
+.active {
+    background-color: rgba(255, 255, 255, 0.1);
+    /* Fondo semi-transparente */
+    border-bottom: 2px solid white;
+    /* Línea inferior */
+    font-weight: bold;
+    /* Texto en negrita */
+}
+  

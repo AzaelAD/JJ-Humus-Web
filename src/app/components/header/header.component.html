@@ -2,9 +2,24 @@
   <span class="logo">🌱 JJ Humus</span>
   <span class="spacer"></span>
   <nav>
-    <button mat-button>Inicio</button>
-    <button mat-button>Productos</button>
-    <button mat-button>Nosotros</button>
+    <!-- Botón de Inicio -->
+    <button mat-button routerLink="/" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }" aria-label="Ir a Inicio">
+      Inicio
+    </button>
+
+    <!-- Botón de Productos -->
+    <button mat-button routerLink="/products" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }" aria-label="Ir a Productos">
+      Productos
+    </button>
+
+    <!-- Botón de Nosotros -->
+    <button mat-button routerLink="/about-us" routerLinkActive="active" 
+      [routerLinkActiveOptions]="{ exact: true }" aria-label="Ir a Nosotros">
+      Nosotros
+    </button>
+
   </nav>
   <span class="spacer"></span>
   <mat-form-field appearance="outline">
