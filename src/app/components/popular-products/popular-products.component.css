@@ -1,3 +1,21 @@
+.popular-products {
+  padding-top: 10px;
+  padding-bottom: 50px;
+  background-color: #f0f0f3;
+}
+
+.popular-products h2 {
+  text-align: center;
+}
+
+.popular-products h3 {
+  text-align: center;
+}
+
+.popular-products h4 {
+  text-align: center;
+}
+
 .products-grid {
   display: flex;
   justify-content: center;
@@ -5,16 +23,12 @@
   flex-wrap: wrap;
 }
 
-.popular-products h2 {
-  text-align: center;
-}
-
 mat-card {
   max-width: 300px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 450px; 
+  height: 450px;
 }
 
 mat-card-content {
@@ -23,6 +37,7 @@ mat-card-content {
 
 mat-card-actions {
   display: flex;
-  justify-content: flex-end; 
+  justify-content: center;
   margin-top: auto;
+  margin-bottom: 10px;
 }

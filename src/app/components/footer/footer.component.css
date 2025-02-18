@@ -4,7 +4,6 @@
   color: white;
   text-align: center;
   padding: 10px 10px 10px 10px;
-  margin-top: 20px;
   position: relative;
   bottom: 0;
   width: calc(100% 20px);
@@ -20,7 +19,7 @@
   padding: 0 20px;
 }
 
-.email{
+.email {
   color: white;
 }
 

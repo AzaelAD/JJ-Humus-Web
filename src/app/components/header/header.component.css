@@ -1,27 +1,137 @@
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 10px;
-    z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  z-index: 1000;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-expansion {
+  position: fixed;
+  top: 60px; /* Ajusta según la altura del header */
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-expansion.open {
+  max-height: 100px; /* Altura del contenedor de búsqueda */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.search-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo difuminado */
+  backdrop-filter: blur(5px); /* Efecto de difuminado */
+  z-index: 998; /* Debajo del header y el contenedor de búsqueda */
+}
+
+/* Estilos para el menú de hamburguesa */
+.hamburger {
+  display: none;
+}
+
+.nav-menu button {
+  border-radius: none;
+}
+
+.active {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-bottom: 2px solid white;
+  font-weight: bold;
+}
+
+/* Estilos para móvil */
+@media (max-width: 768px) {
+  .nav-menu button {
+    font-size: 15px;
+    width: 250px;
+  }
+
+  .hamburger {
+    display: block;
+    order: 1;
+  }
+
+  .logo {
+    order: 2;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
     background-color: #fff;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .nav-menu.hidden {
+    display: none;
+  }
+
+  .nav-menu:not(.hidden) {
+    display: flex;
+  }
+
+  .search-field {
+    order: 3;
+  }
 }
 
-.spacer {
-    flex: 1;
-}
+/* Estilos para pantallas más grandes */
+@media (min-width: 769px) {
+  .nav-menu button {
+    font-size: 18px;
+    width: 200px;
+  }
 
-/* Estilo para el botón activo */
-.active {
-    background-color: rgba(255, 255, 255, 0.1);
-    /* Fondo semi-transparente */
-    border-bottom: 2px solid white;
-    /* Línea inferior */
-    font-weight: bold;
-    /* Texto en negrita */
+  .hamburger {
+    display: none;
+  }
+
+  .logo {
+    order: 1;
+  }
+
+  .nav-menu {
+    order: 2;
+  }
+
+  .search-field {
+    order: 3;
+  }
 }
-  

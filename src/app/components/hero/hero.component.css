@@ -1,20 +1,78 @@
 .hero {
-    background: url('https://images.unsplash.com/photo-1560493676-04071c5f467b?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') center/cover;
-    text-align: center;
-    padding: 100px 20px;
-    color: black;
+    background-color: #f0f0f3;
+    padding: 40px 20px;
 }
 
-.title{
-    font-size: 40px;
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide en dos columnas iguales */
+    gap: 40px;
+    /* Espacio entre las columnas */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    max-width: 1200px;
+    /* Ancho máximo del contenido */
+    margin: 0 auto;
+    /* Centra el contenido en la página */
 }
 
-.sub-title{
-    font-size: 25px;
-    font-weight: 550;
+.hero-image img {
+    width: 100%;
+    /* La imagen ocupa el 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
 }
 
+.hero-content {
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+    color: #333;
+    /* Color de texto principal */
+}
 
-.hero h1 span {
-    color: #ff0000;
+.title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    /* Espacio debajo del título */
+}
+
+.highlight {
+    color: #97122e;
+}
+
+.description {
+    font-size: 18px;
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    margin-bottom: 20px;
+    /* Espacio debajo de cada párrafo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        /* Una columna en móvil */
+    }
+
+    .hero-content {
+        text-align: center;
+        /* Centra el texto en móvil */
+    }
+
+    .title {
+        font-size: 28px;
+        /* Tamaño de título más pequeño en móvil */
+    }
+
+    .description {
+        font-size: 16px;
+        /* Tamaño de texto más pequeño en móvil */
+    }
 }
