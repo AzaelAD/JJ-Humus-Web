@@ -13,6 +13,7 @@ import { HomeModule } from './pages/home/home.module';
 import { AboutUsComponent } from './pages/about-us/about-us.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AquacultureProductsComponent } from './pages/products/aquaculture-products/aquaculture-products.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     FooterComponent,
     AboutUsComponent,
     ProductsComponent,
+    AquacultureProductsComponent,
   ],
   imports: [
     BrowserModule,
