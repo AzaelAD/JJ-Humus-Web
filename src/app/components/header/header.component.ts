@@ -9,11 +9,16 @@ import { Component } from '@angular/core';
 export class HeaderComponent {
   isMenuOpen = false;
   isSearchOpen = false; // Controla si el campo de búsqueda está abierto
+  showList = false;
 
   toggleMenu() {
     this.isMenuOpen = !this.isMenuOpen;
   }
-
+  
+  toggleLista() {
+    this.showList = !this.showList;
+  }
+  
   closeMenu() {
     this.isMenuOpen = false; // Cierra el menú al seleccionar una opción
   }

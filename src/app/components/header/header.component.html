@@ -1,4 +1,9 @@
-<mat-toolbar color="primary" class="header">
+<!-- 
+ Crea una barra de herramientas define su color como primario 
+ y se le asgina una clase para manejar su estilo CSS.
+-->
+<mat-toolbar color="primary" class="header"> 
+  
   <!-- Ícono de menú de hamburguesa (solo en móvil) -->
   <button mat-icon-button class="hamburger" (click)="toggleMenu()" aria-label="Menú de navegación">
     <mat-icon>menu</mat-icon>
@@ -9,26 +14,45 @@
 
   <!-- Menú de navegación (solo en pantallas grandes) -->
   <nav [class.hidden]="!isMenuOpen" class="nav-menu">
+    
     <!-- Botón de Inicio -->
-    <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Inicio" (click)="closeMenu()">
+    <button 
+      mat-button 
+      routerLink="/" 
+      routerLinkActive="active" 
+      [routerLinkActiveOptions]="{ exact: true }"
+      aria-label="Ir a Inicio" 
+      (click)="closeMenu()">
       Inicio
     </button>
 
     <!-- Botón de Productos -->
-    <button mat-button routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Productos" (click)="closeMenu()">
-      Productos
+    <button mat-button (click)="toggleLista()">
+      Opciones ▼
     </button>
+  
+    <ul *ngIf="showList" class="submenu">
+      <li><a routerLink="/opcion1" routerLinkActive="active">Opción 1</a></li>
+      <li><a routerLink="/opcion2" routerLinkActive="active">Opción 2</a></li>
+      <li><a routerLink="/opcion3" routerLinkActive="active">Opción 3</a></li>
+    </ul>
 
     <!-- Botón de Nosotros -->
-    <button mat-button routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Nosotros" (click)="closeMenu()">
+    <button 
+      mat-button 
+      routerLink="/about-us" 
+      routerLinkActive="active" 
+      [routerLinkActiveOptions]="{ exact: true }"
+      aria-label="Ir a Nosotros" 
+      (click)="closeMenu()">
       Nosotros
     </button>
 
     <!-- Botón de Buscar -->
-    <button mat-button aria-label="Buscar un producto" (click)="openSearchForm()">
+    <button 
+      mat-button 
+      aria-label="Buscar un producto" 
+      (click)="openSearchForm()">
       Buscar
     </button>
   </nav>
