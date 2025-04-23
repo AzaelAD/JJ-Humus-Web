@@ -16,4 +16,4 @@ import { ProductsComponent } from './products.component';
   ],
   bootstrap: [ProductsComponent]
 })
-export class ProcutsModule { }
+export class ProductsModule { }

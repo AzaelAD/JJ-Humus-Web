@@ -12,7 +12,7 @@ import { MatInputModule } from '@angular/material/input';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './pages/home/home.module';
 import { AboutUsModule } from './pages/about-us/about-us.module';
-import { ProcutsModule } from './pages/products/products.module';
+import { ProductsModule } from './pages/products/products.module';
 
 
 @NgModule({
@@ -32,7 +32,7 @@ import { ProcutsModule } from './pages/products/products.module';
     MatInputModule,
     HomeModule,
     AboutUsModule,
-    ProcutsModule
+    ProductsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
