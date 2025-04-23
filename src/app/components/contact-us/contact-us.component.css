@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f1f4;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #f1f1f4;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 2.2em;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  .subtitulo {
+    font-size: 0.95em;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  form {
+    background-color: #f1f1f4;
+  }
+  
+  .form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 40px;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  label {
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="email"] {
+    padding: 8px;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    font-size: 0.95em;
+  }
+  
+  .btn-enviar {
+    padding: 8px 20px;
+    font-size: 0.95em;
+    background-color: white;
+    border: 1px solid #999;
+    cursor: pointer;
+  }
+  
+  .btn-enviar:hover {
+    background-color: #ddd;
+  }
+  

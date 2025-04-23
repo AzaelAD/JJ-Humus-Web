@@ -1,0 +1,14 @@
+/* products.component.css */
+.products {
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .products{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}

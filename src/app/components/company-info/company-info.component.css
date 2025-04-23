@@ -1,0 +1,91 @@
+.company-info {
+    padding: 40px 20px;
+}
+
+.company-definition-info {
+    padding: 40px 20px;
+}
+
+.info-separator {
+    background-color: #f0f0f3;
+}
+
+.company-info-objectives {
+    padding: 40px 20px;
+    /* font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center; */
+}
+
+.company-info-objectives h2{
+    font-size: 28px;
+}
+
+.company-info-location {
+    padding: 40px 20px;
+    height: 800px;
+}
+
+.company-grid-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* Divide en dos columnas iguales */
+    gap: 0px;
+    /* Espacio entre las columnas */
+    align-items: center;
+    /* Centra verticalmente los elementos */
+    max-width: 1200px;
+    /* Ancho máximo del contenido */
+    margin: 0 auto;
+    /* Centra el contenido en la página */
+}
+
+.company-image img {
+    width: 90%;
+    /* La imagen ocupa el 100% del contenedor */
+    height: auto;
+    /* Mantiene la proporción de la imagen */
+    border-radius: 10px;
+    /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+.content-image img {
+    width: 30%;
+    /* La imagen ocupa el 100% del contenedor */
+    height: auto;
+}
+
+.company-info-title {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.comapny-info-description {
+    font-size: 18px;
+    line-height: 1.6;
+    /* Espaciado entre líneas */
+    margin-bottom: 20px;
+    /* Espacio debajo de cada párrafo */
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .company-grid-content {
+        grid-template-columns: 1fr;
+        /* Una columna en móvil */
+    }
+
+    .company-info-title {
+        font-size: 28px;
+        /* Tamaño de título más pequeño en móvil */
+    }
+
+    .comapny-info-description {
+        font-size: 16px;
+        /* Tamaño de texto más pequeño en móvil */
+    }
+}

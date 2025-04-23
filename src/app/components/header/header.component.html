@@ -1,6 +1,6 @@
 <mat-toolbar color="primary" class="header">
   <!-- Ícono de menú de hamburguesa (solo en móvil) -->
-  <button mat-icon-button class="hamburger" (click)="toggleMenu()" aria-label="Menú de navegación">
+  <button id="btnHamburger" mat-icon-button class="hamburger" (click)="toggleMenu($event)" aria-label="Menú de navegación">
     <mat-icon>menu</mat-icon>
   </button>
 
@@ -10,25 +10,25 @@
   <!-- Menú de navegación (solo en pantallas grandes) -->
   <nav [class.hidden]="!isMenuOpen" class="nav-menu">
     <!-- Botón de Inicio -->
-    <button mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Inicio" (click)="closeMenu()">
+    <button id="btnHome" mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      aria-label="Ir a Inicio" (click)="closeMenu($event)">
       Inicio
     </button>
 
     <!-- Botón de Productos -->
-    <button mat-button routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Productos" (click)="closeMenu()">
+    <button id="btnProducts" mat-button routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      aria-label="Ir a Productos" (click)="closeMenu($event)">
       Productos
     </button>
 
     <!-- Botón de Nosotros -->
-    <button mat-button routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Nosotros" (click)="closeMenu()">
+    <button id="btnAboutUs" mat-button routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+      aria-label="Ir a Nosotros" (click)="closeMenu($event)">
       Nosotros
     </button>
 
     <!-- Botón de Buscar -->
-    <button mat-button aria-label="Buscar un producto" (click)="openSearchForm()">
+    <button id="btnOpenSearchForm" mat-button aria-label="Buscar un producto" (click)="openSearchForm($event)">
       Buscar
     </button>
   </nav>
@@ -37,12 +37,12 @@
 <!-- Contenedor de búsqueda que se despliega debajo del header -->
 <div class="search-expansion" [class.open]="isSearchOpen">
   <div class="search-container">
-    <input type="text" placeholder="Buscar..." class="search-input" />
-    <button mat-icon-button (click)="closeSearchForm()" aria-label="Cerrar búsqueda">
+    <input type="text" placeholder="Busca un producto..." class="search-input" />
+    <button id="btnCloseSearchForm" mat-icon-button (click)="closeSearchForm($event)" aria-label="Cerrar búsqueda">
       <mat-icon>close</mat-icon>
     </button>
   </div>
 </div>
 
 <!-- Fondo difuminado (se muestra cuando isSearchOpen es true) -->
-<div class="overlay" *ngIf="isSearchOpen" (click)="closeSearchForm()"></div>
+<div class="overlay" *ngIf="isSearchOpen" (click)="closeSearchForm($event)"></div>

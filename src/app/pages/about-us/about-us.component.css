@@ -1,16 +1,14 @@
 /* about-us.component.css */
-.nosotros {
-    text-align: center;
-    padding: 2rem;
-  }
-  
-  .nosotros h2 {
-    color: #4a148c;
-  }
-  
-  .nosotros p {
-    color: #333;
-    font-size: 1.2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
+.about-us {
+    margin-top: 20px;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+    .about-us{
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+}
