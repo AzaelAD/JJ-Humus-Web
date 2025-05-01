@@ -39,7 +39,10 @@
             "styles": [
               "src/custom-theme.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/simplemaps/mex/mapdata.js",
+              "src/assets/simplemaps/mex/countrymap.js"
+            ]
           },
           "configurations": {
             "production": {
