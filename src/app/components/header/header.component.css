@@ -14,7 +14,8 @@
 
 .search-expansion {
   position: fixed;
-  top: 60px; /* Ajusta según la altura del header */
+  top: 60px;
+  /* Ajusta según la altura del header */
   left: 0;
   right: 0;
   background-color: #fff;
@@ -25,7 +26,8 @@
 }
 
 .search-expansion.open {
-  max-height: 100px; /* Altura del contenedor de búsqueda */
+  max-height: 100px;
+  /* Altura del contenedor de búsqueda */
   height: 100px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
@@ -56,14 +58,25 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Fondo difuminado */
-  backdrop-filter: blur(5px); /* Efecto de difuminado */
-  z-index: 998; /* Debajo del header y el contenedor de búsqueda */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Fondo difuminado */
+  backdrop-filter: blur(5px);
+  /* Efecto de difuminado */
+  z-index: 998;
+  /* Debajo del header y el contenedor de búsqueda */
 }
 
 /* Estilos para el menú de hamburguesa */
 .hamburger {
+  padding: 0;
+  margin: 0;
   display: none;
+  width: 56px;
+  height: 56px;
+}
+
+.hamburger mat-icon {
+  font-size: 32px;
 }
 
 .nav-menu button {
@@ -76,8 +89,29 @@
   font-weight: bold;
 }
 
-/* Estilos para móvil */
+/* Menú lateral */
 @media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    top: 60px;
+    right: 0;
+    width: 100%; /* o cualquier ancho que desees relativo al viewport */
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+  }
+
+  .nav-menu.mobile-open {
+    display: flex !important;
+  }
+
+  .nav-menu.hidden {
+    display: none !important;
+  }
+
   .nav-menu button {
     font-size: 15px;
     width: 250px;
@@ -92,31 +126,21 @@
     order: 2;
   }
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 60px;
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-  }
-
-  .nav-menu.hidden {
-    display: none;
-  }
-
-  .nav-menu:not(.hidden) {
-    display: flex;
-  }
-
   .search-field {
     order: 3;
   }
 }
 
-/* Estilos para pantallas más grandes */
+/* Nav Normal */
 @media (min-width: 769px) {
+  .nav-menu {
+    display: flex !important;
+    flex-direction: row;
+    position: relative;
+    background-color: transparent;
+    box-shadow: none;
+  }
+
   .nav-menu button {
     font-size: 18px;
     width: 200px;
@@ -124,17 +148,18 @@
 
   .hamburger {
     display: none;
-  }
-
-  .logo {
     order: 1;
   }
 
-  .nav-menu {
+  .logo {
     order: 2;
   }
 
-  .search-field {
+  .nav-menu {
     order: 3;
+  }
+
+  .search-field {
+    order: 4;
   }
 }

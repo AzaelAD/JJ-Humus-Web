@@ -15,11 +15,7 @@ export class HeaderComponent {
   }
 
   closeMenu(event: Event) {
-    if ((event.target as HTMLButtonElement).id != "btnOpenSearchForm") {
-      return;
-    }
-    console.log((event.target as HTMLButtonElement).id, "cp");
-    this.isMenuOpen = false; // Cierra el menú al seleccionar una opción
+    this.isMenuOpen = false;
   }
 
   openSearchForm(event: Event) {

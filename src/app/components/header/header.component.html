@@ -1,14 +1,16 @@
 <mat-toolbar color="primary" class="header">
   <!-- Ícono de menú de hamburguesa (solo en móvil) -->
-  <button id="btnHamburger" mat-icon-button class="hamburger" (click)="toggleMenu($event)" aria-label="Menú de navegación">
+  <button id="btnHamburger" mat-icon-button class="hamburger" (click)="toggleMenu($event)"
+    aria-label="Menú de navegación">
     <mat-icon>menu</mat-icon>
   </button>
 
   <!-- Logo -->
-  <span class="logo">🌱 JJ Humus</span>
+  <span class="text-2xl">🌱 JJ Humus</span>
 
   <!-- Menú de navegación (solo en pantallas grandes) -->
-  <nav [class.hidden]="!isMenuOpen" class="nav-menu">
+  <nav [class.mobile-open]="isMenuOpen" class="nav-menu">
+
     <!-- Botón de Inicio -->
     <button id="btnHome" mat-button routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
       aria-label="Ir a Inicio" (click)="closeMenu($event)">
@@ -16,14 +18,14 @@
     </button>
 
     <!-- Botón de Productos -->
-    <button id="btnProducts" mat-button routerLink="/products" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Productos" (click)="closeMenu($event)">
+    <button id="btnProducts" mat-button routerLink="/products" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }" aria-label="Ir a Productos" (click)="closeMenu($event)">
       Productos
     </button>
 
     <!-- Botón de Nosotros -->
-    <button id="btnAboutUs" mat-button routerLink="/about-us" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
-      aria-label="Ir a Nosotros" (click)="closeMenu($event)">
+    <button id="btnAboutUs" mat-button routerLink="/about-us" routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }" aria-label="Ir a Nosotros" (click)="closeMenu($event)">
       Nosotros
     </button>
 
