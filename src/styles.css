@@ -1,0 +1,51 @@
+@import "tailwindcss";
+
+
+body {
+    margin: 0;
+    background-color: #f8f8f8;
+    padding-top: 66px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Estilos generales de botones
+  Títulos */
+  .gen-title-button {
+    font-size: 18px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #5c811a;
+    /* Color primario del botón */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+  }
+  
+  .gen-title-button:hover {
+    background-color: #25340a;
+    /* Color al pasar el mouse */
+  }
+  
+  /* Normal */
+  .gen-normal-button {
+    font-size: 16px;
+    padding: 12px 24px;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2d5a15;
+    /* Color primario del botón */
+    color: white;
+    border: none;
+    transition: background-color 0.3s ease;
+    /* Transición suave */
+  }
+  
+  .gen-normal-button:hover {
+    background-color: #132709;
+    /* Color al pasar el mouse */
+  }
