@@ -5,16 +5,25 @@
   margin-bottom: 20px;
 }
 
-.popular-products h2 {
+.products-content {
+  color: #333;
+}
+
+.popular-products h2,
+h3,
+h4 {
   text-align: center;
+}
+
+.popular-products h2 {
+  font-size: 30px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .popular-products h3 {
-  text-align: center;
-}
-
-.popular-products h4 {
-  text-align: center;
+  font-size: 25px;
+  margin-bottom: 5px;
 }
 
 .products-grid {
@@ -22,6 +31,24 @@
   justify-content: center;
   gap: 20px;
   flex-wrap: wrap;
+}
+
+.product {
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 20px;
+  text-align: center;
+  background-color: #eee;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
 }
 
 mat-card {

@@ -1,4 +1,5 @@
-<mat-toolbar color="primary" class="header">
+<section>
+  <mat-toolbar color="primary" class="header">
   <!-- Ícono de menú de hamburguesa (solo en móvil) -->
   <button id="btnHamburger" mat-icon-button class="hamburger" (click)="toggleMenu($event)"
     aria-label="Menú de navegación">
@@ -48,3 +49,4 @@
 
 <!-- Fondo difuminado (se muestra cuando isSearchOpen es true) -->
 <div class="overlay" *ngIf="isSearchOpen" (click)="closeSearchForm($event)"></div>
+</section>

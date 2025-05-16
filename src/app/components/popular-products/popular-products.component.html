@@ -1,16 +1,18 @@
 <section class="popular-products">
-  <h2>Productos populares</h2>
-  <h3>Da un vistazo a nuestros productos más vendidos</h3>
-  <div class="products-grid">
-    <mat-card *ngFor="let product of products">
-      <img mat-card-image [src]="product.image" alt="Product Image">
-      <mat-card-content>
-        <h4>{{ product.name }}</h4>
-        <p>{{ product.description }}</p>
-      </mat-card-content>
-      <mat-card-actions>
-        <button mat-raised-button color="primary" class="gen-normal-button">Más información</button>
-      </mat-card-actions>
-    </mat-card>
+  <div class="products-content">
+    <h2>Productos populares</h2>
+    <h3>Da un vistazo a nuestros productos más vendidos</h3>
+    <div class="products-grid">
+        <mat-card *ngFor="let product of products" class="product">
+          <img mat-card-image [src]="product.image" alt="Product Image">
+          <mat-card-content>
+            <h4>{{ product.name }}</h4>
+            <p>{{ product.description }}</p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-raised-button color="primary" class="gen-normal-button">Más información</button>
+          </mat-card-actions>
+        </mat-card>
+    </div>
   </div>
 </section>

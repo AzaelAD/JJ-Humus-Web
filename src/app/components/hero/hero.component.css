@@ -1,78 +1,101 @@
+/* Hero que ocupa toda la ventana */
 .hero {
     background-color: #f0f0f3;
-    padding: 40px 20px;
+    height: 100vh; /* Ocupa toda la altura de la ventana */
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
+/* Grid del contenido */
 .hero-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* Divide en dos columnas iguales */
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
     gap: 40px;
-    /* Espacio entre las columnas */
     align-items: center;
-    /* Centra verticalmente los elementos */
     max-width: 1200px;
-    /* Ancho máximo del contenido */
     margin: 0 auto;
-    /* Centra el contenido en la página */
+    width: 100%;
 }
 
+/* Imagen */
 .hero-image img {
     width: 100%;
-    /* La imagen ocupa el 100% del contenedor */
     height: auto;
-    /* Mantiene la proporción de la imagen */
-    border-radius: 10px;
-    /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    /* Sombra suave */
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
+/* Contenido textual */
 .hero-content {
     text-align: left;
-    /* Alinea el texto a la izquierda */
     color: #333;
-    /* Color de texto principal */
 }
 
+/* Título */
 .title {
-    font-size: 36px;
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
-    /* Espacio debajo del título */
 }
 
+/* Palabra resaltada */
 .highlight {
     color: #97122e;
 }
 
+/* Descripción */
 .description {
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.6;
-    /* Espaciado entre líneas */
     margin-bottom: 20px;
-    /* Espacio debajo de cada párrafo */
+    color: #444;
 }
 
-/* Estilos responsivos */
+/* Botón personalizado */
+.gen-title-button {
+    padding: 12px 24px;
+    font-size: 16px;
+    background-color: #97122e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.gen-title-button:hover {
+    background-color: #7c0e26;
+}
+
+/* Responsivo para pantallas pequeñas */
 @media (max-width: 768px) {
+    .hero {
+        height: auto; /* Permite que crezca según el contenido en móvil */
+        padding: 40px 20px;
+    }
+
     .hero-grid {
-        grid-template-columns: 1fr;
-        /* Una columna en móvil */
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
     }
 
     .hero-content {
         text-align: center;
-        /* Centra el texto en móvil */
     }
 
     .title {
-        font-size: 28px;
-        /* Tamaño de título más pequeño en móvil */
+        font-size: 32px;
     }
 
     .description {
         font-size: 16px;
-        /* Tamaño de texto más pequeño en móvil */
+    }
+
+    .hero-image img {
+        max-height: 300px;
+        object-fit: cover;
     }
 }
