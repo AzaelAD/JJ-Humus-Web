@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrl: './products.component.css'
 })
 export class ProductsComponent {
+  categoriaSeleccionada: string = 'agricola'; // Valor por defecto
 
+  seleccionarCategoria(categoria: string) {
+    this.categoriaSeleccionada = categoria;
+  }
 }

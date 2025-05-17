@@ -1,8 +1,8 @@
 /* products.component.css */
 .product-section {
-  padding: 40px 20px;
   background-color: #f8f8f8;
   font-family: sans-serif;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .product-header {
@@ -18,113 +18,14 @@
 
 .product-header p {
   font-size: 18px;
-  color: #555;
+  color: #333;
 }
 
 .product-container {
+  padding: 50px 0px 50px 0px;
   display: flex;
   gap: 40px;
-  max-width: 1200px;
   margin: 0 auto;
-}
-
-/* Filtros */
-.filters {
-  flex: 1;
-  max-width: 250px;
-}
-
-.filters h3 {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-.tabs {
-  display: flex;
-  gap: 10px;
-  margin-bottom: 20px;
-}
-
-.tab {
-  padding: 8px 16px;
-  background-color: #ddd;
-  border: none;
-  cursor: pointer;
-  border-radius: 6px;
-  font-weight: bold;
-}
-
-.tab.active {
-  background-color: #555;
-  color: white;
-}
-
-.filter-group {
-  margin-bottom: 20px;
-}
-
-.filter-group label {
-  font-weight: bold;
-  display: block;
-  margin-bottom: 5px;
-}
-
-.filter-group ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.filter-group li {
-  margin-bottom: 6px;
-  font-size: 14px;
-}
-
-/* Grid de productos */
-.product-grid {
-  flex: 3;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.product-card {
-  background: white;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.product-card .image-placeholder {
-  background-color: #ccc;
-  height: 150px;
-  border-radius: 6px;
-  margin-bottom: 10px;
-}
-
-.product-card h4 {
-  margin: 0 0 10px 0;
-  font-size: 18px;
-}
-
-.product-card p {
-  font-size: 14px;
-  color: #444;
-  margin-bottom: 10px;
-}
-
-.product-card a {
-  font-weight: bold;
-  color: #97122e;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.product-card a:hover {
-  text-decoration: underline;
 }
 
 /* Responsivo */
@@ -135,9 +36,5 @@
 
   .filters {
     max-width: 100%;
-  }
-
-  .product-grid {
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   }
 }

@@ -1,7 +1,7 @@
 /* Hero que ocupa toda la ventana */
 .hero {
     background-color: #f0f0f3;
-    height: 100vh; /* Ocupa toda la altura de la ventana */
+    height: 95vh; /* Ocupa toda la altura de la ventana */
     padding: 0 20px;
     display: flex;
     align-items: center;
