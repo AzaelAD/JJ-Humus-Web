@@ -5,17 +5,21 @@ import { HomeComponent } from './home.component';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { PopularProductsComponent } from '../../components/popular-products/popular-products.component';
 import { CategoriesComponent } from '../../components/categories/categories.component';
+import { ProductViewComponent } from '../../components/product-view/product-view.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   declarations: [
     HomeComponent,
     HeroComponent,
     CategoriesComponent,
-    PopularProductsComponent
+    PopularProductsComponent,
+    ProductViewComponent
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    RouterModule
   ],
   exports: [
     HomeComponent

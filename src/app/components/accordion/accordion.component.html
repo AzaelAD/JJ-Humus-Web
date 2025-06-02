@@ -1,0 +1,17 @@
+<div class="bg-[#f9fafb] rounded-md shadow-sm border border-gray-200 mb-4 transition">
+  <button
+    class="w-full text-left px-4 py-3 flex justify-between items-center font-medium text-gray-700 hover:bg-gray-100 focus:outline-none"
+    (click)="toggle()">
+    <span>{{ title }}</span>
+    <svg [ngClass]="{ 'rotate-180': isOpen }" class="w-4 h-4 text-gray-500 transition-transform duration-300"
+         fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M19 9l-7 7-7-7"/>
+    </svg>
+  </button>
+  <div
+    [@accordionBody]="isOpen ? 'open' : 'closed'"
+    class="px-4 text-sm text-gray-600 leading-relaxed overflow-hidden">
+    <ng-content></ng-content>
+  </div>
+</div>

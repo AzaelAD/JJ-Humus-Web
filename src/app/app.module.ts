@@ -13,13 +13,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './pages/home/home.module';
 import { AboutUsModule } from './pages/about-us/about-us.module';
 import { ProductsModule } from './pages/products/products.module';
+import { ProductInfoModule } from './pages/product-info/product-info.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    FooterComponent,
+    FooterComponent
   ],
   imports: [
     AppRoutingModule,
@@ -32,7 +33,8 @@ import { ProductsModule } from './pages/products/products.module';
     MatInputModule,
     HomeModule,
     AboutUsModule,
-    ProductsModule
+    ProductsModule,
+    ProductInfoModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,27 @@
+<div class="card">
+  <div class="card-img">
+    <img [src]="product?.image" alt="card-image" />
+  </div>
+
+  <div class="card-info">
+    <p class="text-title">{{ product?.name }}</p>
+    <p class="text-body">{{ product?.description }}</p>
+  </div>
+
+  <div class="card-footer">
+    <!-- Botón con ícono SVG -->
+    <div class="card-button">
+      <a [routerLink]="['/product-info']">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
+          viewBox="0 0 24 24" fill="none" stroke="#000000"
+          stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 9h.01" />
+          <path d="M11 12h1v4h1" />
+        </svg>
+      </a>
+    </div>
+
+    <!-- Texto Info -->
+    <a [routerLink]="['/product-info']" class="btn-info">Info</a>
+  </div>
+</div>

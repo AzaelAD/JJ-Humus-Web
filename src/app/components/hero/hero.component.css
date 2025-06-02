@@ -1,6 +1,6 @@
 /* Hero que ocupa toda la ventana */
 .hero {
-    background-color: #f0f0f3;
+    background-color: #C6D166;
     height: 95vh; /* Ocupa toda la altura de la ventana */
     padding: 0 20px;
     display: flex;
@@ -43,7 +43,7 @@
 
 /* Palabra resaltada */
 .highlight {
-    color: #97122e;
+    color: #FFFFFF;
 }
 
 /* Descripción */
@@ -58,8 +58,8 @@
 .gen-title-button {
     padding: 12px 24px;
     font-size: 16px;
-    background-color: #97122e;
-    color: white;
+    background-color: #FFFFFF;
+    color: black;
     border: none;
     border-radius: 8px;
     cursor: pointer;
@@ -67,7 +67,8 @@
 }
 
 .gen-title-button:hover {
-    background-color: #7c0e26;
+    background-color: #0F1B07;
+    color: white;
 }
 
 /* Responsivo para pantallas pequeñas */

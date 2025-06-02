@@ -1,25 +1,82 @@
-.company-info {
-    padding: 40px 20px;
+
+/* ¿Quiénes Somos? */
+.hero {
+    background-color: #C6D166;
+    height: 95vh; /* Ocupa toda la altura de la ventana */
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.company-definition-info {
-    padding: 40px 20px;
+/* Grid del contenido */
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Dos columnas iguales */
+    gap: 40px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
 }
 
-.info-separator {
-    background-color: #f0f0f3;
+/* Imagen */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
 }
 
-.company-info-objectives {
-    padding: 40px 20px;
-    /* font-size: 36px;
+/* Contenido textual */
+.hero-content {
+    text-align: left;
+    color: #333;
+}
+
+/* Título */
+.title {
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
-    text-align: center; */
 }
 
-.company-info-objectives h2{
-    font-size: 28px;
+/* Descripción */
+.description {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+/* ¿Quiénes Somos? - Fin */
+
+/* Misión y visión de la empresa */
+.mision-vision-container{
+    width: 100%;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+h2{
+    font-size: clamp(1.4rem, 4.4vw, 5.8rem);
+    font-weight: 200;
+    font-family: "Roboto";
+}
+.mision-vision-cards{
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+/* Misión y visión de la empresa - Fin */
+
+.company-info {
+    padding: 40px 20px;
+    background-color: #B2FAA4;
 }
 
 .company-info-location {
@@ -74,6 +131,39 @@
 
 /* Estilos responsivos */
 @media (max-width: 768px) {
+    .hero {
+        height: auto; /* Permite que crezca según el contenido en móvil */
+        padding: 40px 20px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr; /* Una sola columna */
+        text-align: center;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .title {
+        font-size: 32px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .hero-image img {
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .mision-vision-cards{
+        flex-direction: column;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        align-items: center;
+    }
+
     .company-grid-content {
         grid-template-columns: 1fr;
         /* Una columna en móvil */

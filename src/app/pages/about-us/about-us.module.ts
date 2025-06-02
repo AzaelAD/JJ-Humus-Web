@@ -3,19 +3,19 @@ import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us.component';
 import { CompanyInfoComponent } from '../../components/company-info/company-info.component';
-import { ContactUsComponent } from '../../components/contact-us/contact-us.component';
 import { MexicoComponent } from '../../components/maps/mexico/mexico.component';
+import { SharedModule } from '../..//shared.module';
 
 @NgModule({
   declarations: [
     AboutUsComponent,
     CompanyInfoComponent,
-    ContactUsComponent,
     MexicoComponent
   ],
   imports: [
     CommonModule,
-    MatCardModule
+    MatCardModule,
+    SharedModule
   ],
   exports: [
     AboutUsComponent
