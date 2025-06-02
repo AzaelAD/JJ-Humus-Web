@@ -27,7 +27,8 @@
 
       <!-- Tabs -->
       <div class="flex space-x-2 mb-6">
-        <button (click)="seleccionarCategoria('agricola')" [class.bg-gray-800]="categoriaSeleccionada === 'agricola'"
+        <button (click)="seleccionarCategoria('agricola')" 
+          [class.bg-[#252525]]="categoriaSeleccionada === 'agricola'"
           [class.text-white]="categoriaSeleccionada === 'agricola'"
           [class.bg-gray-200]="categoriaSeleccionada !== 'agricola'"
           [class.text-gray-700]="categoriaSeleccionada !== 'agricola'"
@@ -36,7 +37,7 @@
         </button>
 
         <button (click)="seleccionarCategoria('acuacultura')"
-          [class.bg-gray-800]="categoriaSeleccionada === 'acuacultura'"
+          [class.bg-[#252525]]="categoriaSeleccionada === 'acuacultura'"
           [class.text-white]="categoriaSeleccionada === 'acuacultura'"
           [class.bg-gray-200]="categoriaSeleccionada !== 'acuacultura'"
           [class.text-gray-700]="categoriaSeleccionada !== 'acuacultura'"
