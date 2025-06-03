@@ -1,7 +1,22 @@
-.map-containter{
-    margin-top: 100px;
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.mexico-container {
+  margin: 60px 0px 60px 0px;
+}
+
+.map-container {
+  margin: 100px 0;
+  height: 70vh;
+  position: relative;
+}
+
+.map-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+h2{
+    font-size: clamp(1.4rem, 4.4vw, 5.8rem);
+    font-weight: 200;
+    font-family: "Roboto";
+    text-align: center;
 }
