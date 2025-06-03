@@ -14,6 +14,12 @@ import { HomeModule } from './pages/home/home.module';
 import { AboutUsModule } from './pages/about-us/about-us.module';
 import { ProductsModule } from './pages/products/products.module';
 import { ProductInfoModule } from './pages/product-info/product-info.module';
+import { CrudProductsModule } from './pages/crud-products/crud-products.module';
+
+
+import { HttpClientModule } from '@angular/common/http';
+import { ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -34,7 +40,10 @@ import { ProductInfoModule } from './pages/product-info/product-info.module';
     HomeModule,
     AboutUsModule,
     ProductsModule,
-    ProductInfoModule
+    ProductInfoModule,
+    CrudProductsModule,
+    HttpClientModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
