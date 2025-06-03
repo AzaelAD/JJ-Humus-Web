@@ -5,7 +5,7 @@ import { HomeComponent } from './home.component';
 import { HeroComponent } from '../../components/hero/hero.component';
 import { PopularProductsComponent } from '../../components/popular-products/popular-products.component';
 import { CategoriesComponent } from '../../components/categories/categories.component';
-import { ProductViewComponent } from '../../components/product-view/product-view.component';
+import { SharedModule } from '../../shared.module';
 import { RouterModule } from '@angular/router';
 
 @NgModule({
@@ -13,13 +13,13 @@ import { RouterModule } from '@angular/router';
     HomeComponent,
     HeroComponent,
     CategoriesComponent,
-    PopularProductsComponent,
-    ProductViewComponent
+    PopularProductsComponent
   ],
   imports: [
     CommonModule,
     MatCardModule,
-    RouterModule
+    RouterModule,
+    SharedModule
   ],
   exports: [
     HomeComponent
