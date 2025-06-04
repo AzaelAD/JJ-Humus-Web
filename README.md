@@ -11,6 +11,6 @@ Para consultar la rúbrica del proyecto presione [aquí](https://docs.google.com
 ## Video explicativo de la página
 Link: https://youtu.be/zsFf-MW3cX4
 
-## Comandos para correr el proyuecto
+## Comandos para correr el proyecto
 - `npm install` Inicia el proceso para descargar los módulos utilizados en el proyecto, específicamente las versiones registradas en el archivo package.json
 - `ng serve --open` Para correr el repositorio de manera local
